@@ -1,0 +1,88 @@
+body{
+    background-color: #000B58;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    height: 100%;
+    position: relative;
+}
+
+.all-letters{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+}
+
+.letters-row{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.letter-container{
+    display: flex;
+    flex-direction: column;
+    color: #FFF4B7;
+    background-color: #003161;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 290px;
+    max-height: 200px;
+}
+
+.letter-header h1{
+    margin: 0px;
+    padding: 0;
+}
+
+.date-container{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.create-letter-button-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.create-letter-button{
+    border-radius: 50%;
+    color: #FFF4B7;
+    background-color: #006A67;
+    width: 65px;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+}
+
+.create-letter-form-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.create-letter-form{
+    background-color: #003161;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF4B7;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 20px;
+}

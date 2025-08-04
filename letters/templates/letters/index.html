@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_header }}</title>
+    <link rel="stylesheet" href="{% static 'letters/style.css'%}">
+</head>
+<body>
+    <main>
+        <div class="all-letters"></div>
+        <div class="create-letter-button-container">
+            <button class="create-letter-button" id="create-letter-button">+</button>
+        </div>
+        <div class="create-letter-form-container" id="create-letter-form-container">
+            <form action="{% url 'letter:letters_api' %}" method="post" class="create-letter-form" id="create-letter-form">
+                {% csrf_token %}
+                <div>
+                    <h1>Create your letter</h1>
+                </div>
+                <div class="letter-name-input">
+                    <label for="name">Letter name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="letter-description-input">
+                    <label for="description">Letter description</label>
+                    <input type="text" id="description" name="description">
+                </div>
+                <div class="letter-to-date-input">
+                    <label for="date_user_can_open_letter">Date when you want to open this letter</label>
+                    <input type="date" id="date_user_can_open_letter" name="date_user_can_open_letter">
+                </div>
+                <div>
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="button" value="Cancel" id="cancel-button">
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="{% static 'letters/index.js'%}" type="module"></script>
+    <script src="{% static 'letters/Form.js'%}" type="module"></script>
+    <script src="{% static 'letters/Button.js'%}" type="module"></script>
+    <script src="{% static 'letters/Letter.js'%}" type="module"></script>
+</body>
+</html>
