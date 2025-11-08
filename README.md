@@ -4,7 +4,7 @@
 
 *A minimalist web app for writing letters to your future self.*
 
-Built with **Django**, **PostgreSQL**, and a touch of **JavaScript** — this project demonstrates practical full-stack development with clear architecture, user authentication, and templating.
+Built with **Django**, **PostgreSQL**, and a touch of **JavaScript** — this project demonstrates practical full-stack development with user authentication, and templating.
 
 ---
 
